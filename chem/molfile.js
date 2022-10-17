@@ -72,14 +72,16 @@ chem.Molfile.fmtInfo = {
 		5: chem.Struct.BOND.TYPE.SINGLE_OR_DOUBLE,
 		6: chem.Struct.BOND.TYPE.SINGLE_OR_AROMATIC,
 		7: chem.Struct.BOND.TYPE.DOUBLE_OR_AROMATIC,
-		8: chem.Struct.BOND.TYPE.ANY
+		8: chem.Struct.BOND.TYPE.ANY,
+		9: chem.Struct.BOND.TYPE.COORDINATION
 		},
 	bondStereoMap: {
 		0: chem.Struct.BOND.STEREO.NONE,
 		1: chem.Struct.BOND.STEREO.UP,
 		4: chem.Struct.BOND.STEREO.EITHER,
 		6: chem.Struct.BOND.STEREO.DOWN,
-		3: chem.Struct.BOND.STEREO.CIS_TRANS
+		3: chem.Struct.BOND.STEREO.CIS_TRANS,
+		9: chem.Struct.BOND.STEREO.BOLD_UP
 		},
 	v30bondStereoMap: {
 		0: chem.Struct.BOND.STEREO.NONE,
