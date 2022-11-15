@@ -571,6 +571,13 @@ rnd.ReStruct.prototype.drawBond = function (bond, hb1, hb2)
 		case chem.Struct.BOND.TYPE.ANY:
 			path = this.drawBondAny(hb1, hb2, bond);
 			break;
+		case chem.Struct.BOND.TYPE.COORDINATION:
+		  if (bond.b.display === chem.Struct.BOND.DISPLAY.COORD) {
+				path = this.drawBondArrow(hb1, hb2, bond);
+			} else {
+			  path = this.drawBondAny(hb1, hb2, bond);
+		  }
+			break;
 		default:
 			throw new Error("Bond type " + bond.b.type + " not supported");
 	}
