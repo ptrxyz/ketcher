@@ -471,7 +471,7 @@ ui.init = function (parameters, opts)
     }
 
     // Init renderer
-    opts.atomColoring = true;
+    opts.atomColoring = false;
     this.render =  new rnd.Render(this.client_area, ui.scale, opts);
     this.editor = new rnd.Editor(this.render);
 
@@ -724,6 +724,8 @@ ui.selectMode = function (mode)
 ui.bondTypeMap = {
     'single'   : {type: 1, stereo: chem.Struct.BOND.STEREO.NONE},
     'up'       : {type: 1, stereo: chem.Struct.BOND.STEREO.UP},
+    'bold'     : {type: 1, stereo: chem.Struct.BOND.STEREO.BOLD_UP},
+    'bold_down': {type: 1, stereo: chem.Struct.BOND.STEREO.BOLD_DOWN},
     'down'     : {type: 1, stereo: chem.Struct.BOND.STEREO.DOWN},
     'updown'   : {type: 1, stereo: chem.Struct.BOND.STEREO.EITHER},
     'double'   : {type: 2, stereo: chem.Struct.BOND.STEREO.NONE},
@@ -733,7 +735,9 @@ ui.bondTypeMap = {
     'singledouble'   : {type: 5, stereo: chem.Struct.BOND.STEREO.NONE},
     'singlearomatic' : {type: 6, stereo: chem.Struct.BOND.STEREO.NONE},
     'doublearomatic' : {type: 7, stereo: chem.Struct.BOND.STEREO.NONE},
-    'any'      :  {type: 8, stereo: chem.Struct.BOND.STEREO.NONE}
+    'any'      :  {type: 8, stereo: chem.Struct.BOND.STEREO.NONE},
+    'coordination': {type: 9, stereo: chem.Struct.BOND.STEREO.NONE, display: null},
+    'coordinationarrow': {type: 9, stereo: chem.Struct.BOND.STEREO.NONE, display: chem.Struct.BOND.DISPLAY.COORD}
 };
 
 ui.bondType = function (mode)
