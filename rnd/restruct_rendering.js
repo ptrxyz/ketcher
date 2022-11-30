@@ -578,6 +578,9 @@ rnd.ReStruct.prototype.drawBond = function (bond, hb1, hb2)
 			  path = this.drawBondAny(hb1, hb2, bond);
 		  }
 			break;
+		case chem.Struct.BOND.TYPE.HYDROGEN:
+                          path = this.drawBondAny(hb1, hb2, bond);
+                        break;
 		default:
 			throw new Error("Bond type " + bond.b.type + " not supported");
 	}
