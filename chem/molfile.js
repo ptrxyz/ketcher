@@ -73,7 +73,8 @@ chem.Molfile.fmtInfo = {
 		6: chem.Struct.BOND.TYPE.SINGLE_OR_AROMATIC,
 		7: chem.Struct.BOND.TYPE.DOUBLE_OR_AROMATIC,
 		8: chem.Struct.BOND.TYPE.ANY,
-		9: chem.Struct.BOND.TYPE.COORDINATION
+		9: chem.Struct.BOND.TYPE.COORDINATION,
+               10: chem.Struct.BOND.TYPE.HYDROGEN
 		},
 	bondStereoMap: {
 		0: chem.Struct.BOND.STEREO.NONE,

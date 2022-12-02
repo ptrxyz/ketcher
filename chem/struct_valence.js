@@ -38,6 +38,9 @@ chem.Struct.prototype.calcConn = function (aid)
 			case chem.Struct.BOND.TYPE.COORDINATION:
 				// conn += 0;
 				break;
+			case chem.Struct.BOND.TYPE.HYDROGEN:
+				// conn += 0;
+				break;
 			default:
 				return -1;
 		}
